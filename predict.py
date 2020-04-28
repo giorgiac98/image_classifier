@@ -21,7 +21,7 @@ def predict(image_path, model, top_k):
 
     top_k_index = np.argsort(pred[0])[-top_k:]
     top_k_pred = [pred[0][i] for i in top_k_index]
-    top_k_label = [str(i) for i in top_k_index]
+    top_k_label = [str(i+1) for i in top_k_index]
 
     return top_k_pred, top_k_label
 
